@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overtime Pay Calculator</title>
+    <script src="paySalary.js"></script>
+    <script>
+        function calculatePay() {
+            const employeeHours = parseInt(document.getElementById("hours").value);
+            const salary = paySalary(employeeHours); // Use the function defined in paySalary.js
+
+            document.getElementById("pay").innerHTML = "Employee Gross Pay: $" + salary.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Overtime Pay Calculator</h1>
+    <label for="hours">Hours Worked:</label>
+    <input id="hours" type="number" value="50">
+    <br>
+    <button onclick="calculatePay()">Calculate Pay</button>
+    <br>
+    <span id="pay">0</span>
+
+</body>
+</html>
